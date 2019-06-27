@@ -1,0 +1,30 @@
+.breadcrumb {
+  &__steenify {
+    font-size: $font_size;
+    background: $nocolor;
+    padding-left: 0;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow: auto;
+    display: flex;
+  }
+
+  &__item {
+    margin-right: em(5px);
+
+    .divider {
+      color: #ccc;
+    }
+  }
+
+  &__link {
+    color: $main_color;
+    font-weight: 700;
+
+    &.active {
+      color: $main_color;
+    }
+  }
+
+
+}

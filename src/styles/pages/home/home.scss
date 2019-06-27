@@ -1,0 +1,27 @@
+.home {
+  &__page {
+    font-size: $font_size;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    // max-width: initial;
+    min-height: 100%;
+    object-fit: cover;
+  }
+}
+
+@import './home_hero.scss';
+@import './home_work.scss';
+@import './home_example.scss';
+@import './home_price.scss';
+@import './home_review.scss';
+@import './home_faq.scss';
+@import './home_news.scss';

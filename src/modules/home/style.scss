@@ -1,0 +1,9 @@
+@import 'styles/vars.scss';
+
+.home {
+  &__page {
+    font-size: $font_size;
+    position: relative;
+    z-index: 2;
+  }
+}

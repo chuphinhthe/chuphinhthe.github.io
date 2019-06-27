@@ -1,0 +1,56 @@
+.page__404 {
+  padding-top: 110px;
+  background: #F3F5F7;
+}
+
+.page__404__content {
+  min-height: 100vh;
+  position: relative;
+}
+
+.page__404__info {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.page__404__info {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  max-width: 768px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.page__404__info p {
+  font-weight: bold;
+  line-height: normal;
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.page__404__img svg {
+  max-width: 100%;
+}
+
+
+@media (max-width: 991px) {
+  .page__404 {
+    padding-top: 0;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .page__404__image {
+    order: -1;
+  }
+
+  .page__404__info {
+    top: 50px;
+  }
+}

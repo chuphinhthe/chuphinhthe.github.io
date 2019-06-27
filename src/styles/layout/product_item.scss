@@ -1,0 +1,32 @@
+.product_item {
+  font-size: $font_size;
+  margin-bottom: em(15px);
+  transition: all .2s linear;
+  padding: em(10px);
+
+  &__img {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__cat {
+    color: $main_color__1;
+  }
+
+  &__title {
+    color: #222;
+    font-size: em(16px);
+  }
+
+  &:hover {
+    transform: translate3d(0, -1px, 0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    .product_item {
+      &__title {
+        text-decoration: underline;
+      }
+    }
+  }
+}

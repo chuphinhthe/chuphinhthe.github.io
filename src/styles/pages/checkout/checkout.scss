@@ -1,0 +1,89 @@
+.checkout {
+  &__page {
+    font-size: $font_size;
+    position: relative;
+    z-index: 2;
+
+    .container {
+      position: relative;
+      z-index: 3;
+    }
+  }
+
+  &__step {
+    position: relative;
+    width: 100%;
+
+    margin-bottom: em(80px);
+
+    &:not(:first-of-type) {
+      display: none;
+    }
+
+    &__1 {
+      background: $white;
+      box-shadow: 0px 15px 30px rgba(81, 123, 190, 0.149312);
+      border-radius: 10px;
+    }
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &_navgation {
+    &:disabled {
+      opacity: 0.25;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    z-index: 1;
+    -webkit-animation-delay: -0.4s;
+    animation-delay: -0.4s;
+
+    &__2 {
+      top: 0;
+      right: 0;
+      -webkit-animation: checkout__icon__2 60s infinite;
+      animation: checkout__icon__2 60s infinite;
+      -webkit-animation-delay: -0.2s;
+      animation-delay: -0.2s;
+      -webkit-transform: rotateZ(0deg) translate3d(0, 0, 0);
+      transform: rotateZ(0deg) translate3d(0, 0, 0);
+    }
+  }
+
+}
+
+@import './checkout_nav.scss';
+@import './checkout_dropbox.scss';
+@import './checkout_preview.scss';
+@import './checkout_settup.scss';
+@import './checkout_payment.scss';
+
+
+@-webkit-keyframes checkout__icon__2 {
+  0% {
+    -webkit-transform: rotateZ(0deg) translate3d(-50px, 50px, 0);
+    transform: rotateZ(0deg) translate3d(-50px, 50px, 0);
+  }
+
+  100% {
+    -webkit-transform: rotateZ(-45deg) translate3d(0, -50px, 0);
+    transform: rotateZ(-45deg) translate3d(0, -50px, 0);
+  }
+}
+
+@keyframes checkout__icon__2 {
+  0% {
+    -webkit-transform: rotateZ(0deg) translate3d(-50px, 50px, 0);
+    transform: rotateZ(0deg) translate3d(-50px, 50px, 0);
+  }
+
+  100% {
+    -webkit-transform: rotateZ(-45deg) translate3d(0, -50px, 0);
+    transform: rotateZ(-45deg) translate3d(0, -50px, 0);
+  }
+}

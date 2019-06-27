@@ -1,0 +1,47 @@
+@import 'styles/vars.scss';
+$footer_color_text: #b8bbc3;
+
+.footer {
+  &__steenify {
+    font-size: $font_size;
+    background: $white;
+
+    .container {
+      max-width: 1110px;
+    }
+  }
+
+  &--no-bg {
+    background-color: $nocolor;
+  }
+
+  &__content {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__menu {
+    display: block;
+    text-align: right;
+    margin: 0;
+  }
+
+  &__item {
+    display: inline-block;
+    margin-left: 26px;
+  }
+
+  @include max-sm() {
+    &__content {
+      justify-content: center;
+    }
+
+    &__menu {
+      display: none;
+    }
+  }
+}

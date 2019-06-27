@@ -1,0 +1,145 @@
+@import 'styles/vars.scss';
+
+$under_text_color: #B5BDC7;
+$under_fb_color: #2E469D;
+$under_zalo_color: #2CADED;
+
+@-webkit-keyframes under_bg_right {
+  0% {
+    -webkit-transform: rotateZ(0deg) translate3d(0, 0, 0);
+    transform: rotateZ(0deg) translate3d(0, 0, 0);
+  }
+
+  50% {
+    -webkit-transform: rotateZ(45deg) translate3d(50px, 50px, 0);
+    transform: rotateZ(45deg) translate3d(50px, 50px, 0);
+  }
+
+  100% {
+    -webkit-transform: rotateZ(0deg) translate3d(0, 0, 0);
+    transform: rotateZ(0deg) translate3d(0, 0, 0);
+  }
+}
+
+.under_construction {
+  &__content {
+    max-width: 705px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    padding: em(46px) 0 em(160px) 0;
+  }
+
+  &__bg {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  &__bg-left {
+    position: absolute;
+    bottom: em(30px);
+    left: -340px;
+  }
+
+  &__bg-right {
+    position: absolute;
+    top: -87px;
+    right: -110px;
+    -webkit-animation: under_bg_right 80s infinite;
+    animation: under_bg_right 80s infinite;
+    -webkit-animation-delay: -0.2s;
+    animation-delay: -0.2s;
+    -webkit-transform: rotateZ(0deg) translate3d(0, 0, 0);
+    transform: rotateZ(0deg) translate3d(0, 0, 0);
+  }
+
+  &__title {
+    font-size: em(48px);
+    margin-bottom: em(20px, 48px);
+    color: $title_color;
+    font-weight: 700;
+  }
+
+  &__desc {
+    font-size: em(24px);
+    line-height: em(24px, 24px);
+    color: $under_text_color;
+    margin-bottom: em(23px, 24px);
+
+    p {
+      margin-bottom: 0;
+      margin-top: em(28px, 24px);
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__btn {
+    width: 140px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    box-shadow: 0px 15px 30px rgba(81, 123, 190, 0.149312);
+    border-radius: 23px;
+    font-size: em(13px, 18px);
+    line-height: em(13px, 18px);
+
+    &:hover {
+      background-color: $white;
+    }
+
+    &--facebook {
+      background-color: $under_fb_color;
+      border: 1px solid $under_fb_color;
+
+      &:hover {
+        color: $under_fb_color;
+      }
+    }
+
+    &--zalo {
+      background-color: $under_zalo_color;
+      border: 1px solid $under_zalo_color;
+
+      &:hover {
+        color: $under_zalo_color;
+      }
+    }
+  }
+
+  .social {
+    font-size: em(18px);
+    line-height: em(18px);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    li {
+      display: inline-block;
+      margin: 0 5px;
+    }
+  }
+
+  @include max-sm() {
+    &__btn {
+      margin: 5px auto;
+    }
+
+    &__bg-left {
+      display: none;
+    }
+
+    .social {
+      li {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}

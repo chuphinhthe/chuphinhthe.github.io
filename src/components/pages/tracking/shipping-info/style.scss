@@ -1,0 +1,43 @@
+.tracking {
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+
+  &__label {
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: -0.3125px;
+    color: #40445B;
+    opacity: 0.5;
+    margin-right: 15px;
+  }
+
+  &__value {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: right;
+    color: #40445B;
+  }
+
+  &__price {
+    strong {
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 32px;
+      text-align: right;
+      color: #40445B;
+    }
+
+    span {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 16px;
+      text-align: right;
+      color: #40445B;
+    }
+  }
+}
